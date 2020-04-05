@@ -8,8 +8,8 @@ function App () {
     return (
         <BrowserRouter>
             <Switch>
-                <Route path="/" component={Home}/>
-                <Route path="/:pokemonId/info" component={PokemonInfo}/>
+                <Route exact path="/" component={Home}/>
+                <Route exact path="/:pokemonId/info" component={PokemonInfo}/>
             </Switch>
         </BrowserRouter>
     );
