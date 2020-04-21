@@ -1,17 +1,14 @@
 import React from 'react';
+import PokemonList from '../components/PokemonList';
 
-function Home () {
-    return (
-        <React.Fragment>
-            <div className="home__Header">
-                
-            </div>
-
-            <div>
-                
-            </div>
-        </React.Fragment>
-    );
+class Home extends React.Component {
+    render() {
+        return (
+            <React.Fragment>
+                <PokemonList />
+            </React.Fragment>
+        )
+    }
 }
 
 export default Home;

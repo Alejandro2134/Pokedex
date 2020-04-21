@@ -2,6 +2,8 @@ import React from 'react';
 
 //images
 import pokemonLogo from '../images/pokemon-logo.png';
+
+//Styles
 import './styles/NotFound.css'
 
 function NotFound () {
@@ -11,10 +13,10 @@ function NotFound () {
                 src={pokemonLogo} 
                 alt="pokemon-logo" 
                 height="290" 
-                width="800"
+                width="750"
             />
 
-            <h1>Page Not Found</h1>
+            <h1>404 Page Not Found</h1>
         </div>
     );
 }
