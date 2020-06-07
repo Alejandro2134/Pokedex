@@ -13,45 +13,65 @@ export const Home = () => {
 
     useEffect(() => {
 
-        const getPokemons = async () => {
-
-            try {
-
-                const data = await fetch(url);
-                const pokemonData = await data.json();
+        fetch(url)
+            .then(data => data.json())
+            .then(pokemonData => {
                 setPokemons(pokemonData);
                 setLoading(false);
-
-            } catch (err) {
-
+            })
+            .catch(err => {
                 setError(err);
                 setLoading(false);
-
-            }
-
-        }
-
-        getPokemons();
-
+            })
+            
     }, [url])
 
-    const handleClick = () => {
+    const handleNext = () => {
         setUrl(pokemons.next);
+        setLoading(true);
+    }
+
+    const handlePrevious = () => {
+        setUrl(pokemons.previous);
         setLoading(true);
     }
 
     return (
         <React.Fragment>
             {
-                loading 
-                    ? <img id='animation' src={PokeballImg} alt='pokeball' width='100px' height='100px' /> 
+     
+                error 
+                    ? <h1>Hubo un error</h1>
                     : (
                         <React.Fragment>
-                            <PokemonList pokemons={pokemons.results} />
-                            <button onClick={handleClick}>Dame Click!</button>
-                        </React.Fragment>
-                        
+                            <div className='pokemonsContainer'>
+                                {
+                                    loading 
+                                        ? <img id='animation' src={PokeballImg} alt='pokeball' width='100px' height='100px' />
+                                        : (
+                                            <React.Fragment>
+                                                <PokemonList pokemons={pokemons.results} />
+
+                                                <div className='pagination'>
+                                                    {
+                                                        pokemons.previous 
+                                                            ? (
+                                                                <React.Fragment>
+                                                                    <button onClick={handlePrevious}>&laquo;</button>
+                                                                    <button onClick={handleNext}>&raquo;</button>
+                                                                </React.Fragment>  
+                                                            )
+                                                            : <button onClick={handleNext}>&raquo;</button>
+                                                    }  
+                                                </div>
+                                                
+                                            </React.Fragment> 
+                                        )
+                                }  
+                            </div>
+                        </React.Fragment> 
                     )
+                
             }
         </React.Fragment> 
     )

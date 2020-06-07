@@ -1,0 +1,9 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 900px;
+    height: 430px;
+    align-content: space-between;
+    justify-content: space-between;
+}
