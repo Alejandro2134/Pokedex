@@ -43,33 +43,31 @@ export const Home = () => {
                 error 
                     ? <h1>Hubo un error</h1>
                     : (
-                        <React.Fragment>
-                            <div className='pokemonsContainer'>
-                                {
-                                    loading 
-                                        ? <img id='animation' src={PokeballImg} alt='pokeball' width='100px' height='100px' />
-                                        : (
-                                            <React.Fragment>
-                                                <PokemonList pokemons={pokemons.results} />
+                        <div className='pokemonsContainer'>
+                            {
+                                loading 
+                                    ? <img id='animation' src={PokeballImg} alt='pokeball' width='100px' height='100px' />
+                                    : (
+                                        <React.Fragment>
+                                            <PokemonList pokemons={pokemons.results} />
 
-                                                <div className='pagination'>
-                                                    {
-                                                        pokemons.previous 
-                                                            ? (
-                                                                <React.Fragment>
-                                                                    <button onClick={handlePrevious}>&laquo;</button>
-                                                                    <button onClick={handleNext}>&raquo;</button>
-                                                                </React.Fragment>  
-                                                            )
-                                                            : <button onClick={handleNext}>&raquo;</button>
-                                                    }  
-                                                </div>
+                                            <div className='pagination'>
+                                                {
+                                                    pokemons.previous 
+                                                        ? (
+                                                            <React.Fragment>
+                                                                <button onClick={handlePrevious}>&laquo;</button>
+                                                                <button onClick={handleNext}>&raquo;</button>
+                                                            </React.Fragment>  
+                                                        )
+                                                        : <button onClick={handleNext}>&raquo;</button>
+                                                }  
+                                            </div>
                                                 
-                                            </React.Fragment> 
-                                        )
-                                }  
-                            </div>
-                        </React.Fragment> 
+                                        </React.Fragment> 
+                                    )
+                            }  
+                        </div>
                     )
                 
             }
