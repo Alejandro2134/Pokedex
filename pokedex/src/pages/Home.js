@@ -62,8 +62,7 @@ export const Home = () => {
                                                         )
                                                         : <button onClick={handleNext}>&raquo;</button>
                                                 }  
-                                            </div>
-                                                
+                                            </div>      
                                         </React.Fragment> 
                                     )
                             }  
