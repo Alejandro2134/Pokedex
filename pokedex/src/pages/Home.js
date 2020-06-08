@@ -45,12 +45,6 @@ export const Home = () => {
     return (
         <React.Fragment>
             <div className='containerInfo'>
-                <div className="box">
-                    <div className="container-1">
-                        <span className="icon"><i className="fa fa-search"></i></span>
-                        <input type="search" id="search" placeholder="Search..." />
-                    </div>
-                </div>
                 <img src={PokedexLogo} alt='pokedex-logo' height='60px' width='280px'/>
             </div>
             <div className='pokemonsContainer'>
