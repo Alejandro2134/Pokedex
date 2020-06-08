@@ -3,6 +3,7 @@ import { PokemonList } from '../components/PokemonList';
 
 import './styles/Home.css';
 import PokeballImg from '../img/pokeball.webp';
+import PokedexLogo from '../img/pokedex-logo.png';
 
 export const Home = () => {
 
@@ -43,6 +44,15 @@ export const Home = () => {
 
     return (
         <React.Fragment>
+            <div className='containerInfo'>
+                <div className="box">
+                    <div className="container-1">
+                        <span className="icon"><i className="fa fa-search"></i></span>
+                        <input type="search" id="search" placeholder="Search..." />
+                    </div>
+                </div>
+                <img src={PokedexLogo} alt='pokedex-logo' height='60px' width='280px'/>
+            </div>
             <div className='pokemonsContainer'>
             {
                 error 
