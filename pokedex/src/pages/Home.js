@@ -45,7 +45,7 @@ export const Home = () => {
     return (
         <React.Fragment>
             <div className='containerInfo'>
-                <img src={PokedexLogo} alt='pokedex-logo' height='60px' width='280px'/>
+                <img src={PokedexLogo} alt='pokedex-logo' height='60px' width='340px'/>
             </div>
             <div className='pokemonsContainer'>
             {

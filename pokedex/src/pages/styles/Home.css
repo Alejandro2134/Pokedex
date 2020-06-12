@@ -62,3 +62,9 @@ button:hover {
 body {
     background: #A9A9A9;
 }
+
+.pokemonInfo {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
