@@ -8,9 +8,9 @@ A pokedex build in React.js using the pokéapi: https://pokeapi.co/
 
 ## Scripts
 
-* `npm install` para instalar las dependencias
-* `npm run dev` para entorno de desarrollo
-* `npm run build && npm start` para producción
+* `pokedex/npm install` para instalar las dependencias
+* `pokedex/npm run dev` para entorno de desarrollo
+* `pokedex/npm run build && npm start` para producción
 
 ## Licencia
 
